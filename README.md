@@ -1,4 +1,4 @@
-## Knowledge base Slackbot example
+## A slackbolt for getting all users info
 
 This is a demo Slack bot built using Slack's [Bolt APIs](https://slack.dev/bolt-js/tutorial/getting-started)
 

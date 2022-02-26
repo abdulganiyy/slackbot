@@ -12,17 +12,18 @@ const app = new App({
 app.command("/users", async ({ command, ack, say }) => {
   try {
     await ack();
-    let data = command.text.split("|");
-    console.log(data);
-    let key = data[0];
-    let value = data[1];
+    // let data = command.text.split("|");
+    // console.log(data);
+    // let key = data[0];
+    // let value = data[1];
 
     let message = { blocks: [] };
     const response = await axios.get("https://fictus.10hourlabs.com/talents");
     let profiles = response.data.items;
-    profiles = key
-      ? profiles.filter((profile) => profile[key] === value)
-      : profiles;
+
+    // profiles = key
+    //   ? profiles.filter((profile) => profile[key] === value)
+    //   : profiles;
 
     profiles.map((profile) => {
       message.blocks.push({
